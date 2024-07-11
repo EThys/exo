@@ -1,0 +1,58 @@
+
+@import '~bootstrap/scss/bootstrap';
+// @import '~@progress/kendo-theme-bootstrap/dist/all.css';
+@import '~@progress/kendo-theme-default/dist/all.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import 'var';
+@import "~vue-sidebar-menu/src/scss/vue-sidebar-menu.scss";
+.k-filtercell-wrapper {
+    .k-textbox {
+        margin-top: 10px;
+    }
+    .k-filtercell-operator select {
+        width: 30px!important;
+    }
+}
+
+.k-widget.k-grid {
+    border: 0px;
+}
+
+.k-grid-header .k-header {
+    color: #f8f9fa !important;
+    background-color: #2A2A2E !important;
+}
+
+.k-filter-row {
+    background: #6c757d !important;
+}
+
+.k-master-row.table-warning, .k-master-row.table-danger, .k-master-row.table-success {
+    td {
+        border-top: 1px solid #dee2e6!important;
+    }
+}
+
+.btn-primary2 {
+    color: #fff!important;
+    background-color: #007bff!important;
+    border-color: #007bff!important;
+}
+
+.k-grid td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-sized{
+    width: 150px;
+}
+
+// change scroll style
+// .k-grid-content.k-virtual-content {
+
+// }
+
+// (Optional) Kendo UI Hybrid CSS. Include only if you will use the mobile devices features.
+// @import "~@progress/kendo-ui/css/web/kendo.default.mobile.css";
