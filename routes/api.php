@@ -9,6 +9,7 @@ Route::post('/register','AuthController@Register');
 Route::post('/companyCreate','CompanyController@Store');
 Route::post('/currencyCreate','CurrencyController@Store');
 Route::delete('/currencyDelete/{id}','CurrencyController@destroy');
+Route::delete('/companyDelete/{id}','CompanyController@destroy');
 Route::post('/verifyCode','AuthController@postverifyCode');
 
 Route::group([ 'middleware' => ['auth:token', 'throttle:500,1'] ], function () {

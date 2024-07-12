@@ -55,4 +55,12 @@ class CompanyController extends Controller
             'company' => $company
         ]);
     }
+    public function destroy(string $id){
+        $company=Company::find($id);
+        $company->delete();
+        return response()->json([
+            'status'=>201,
+            'message'=>'Suppression reussie'
+        ]);
+    }
 }

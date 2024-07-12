@@ -455,16 +455,16 @@ const OrangeCommandCell = Vue.component("orange-component", {
       expanded: Boolean,
       editor: String
   },
-//   <button
-//   v-if="isSimpleAdmin"
-//     class="btn btn-success btn-sm"
-//     @click="ussdHandler"
-// :disabled="dataItem['Sent'] == 1">
-//     <i v-if="ussdLoading" class="fa fa-spinner fa-spin"></i>
-//     <i v-if="!ussdLoading" class="fa fa-phone-square"></i>
-
-// </button>
   template: ` <td>
+                  <button
+                    v-if="isSimpleAdmin"
+                      class="btn btn-success btn-sm"
+                      @click="ussdHandler"
+					  :disabled="dataItem['Sent'] == 1">
+                      <i v-if="ussdLoading" class="fa fa-spinner fa-spin"></i>
+                      <i v-if="!ussdLoading" class="fa fa-phone-square"></i>
+					  
+                  </button>
                   <button
 						:disabled="dataItem['Sent'] == 1"
                       @keyup.tab="tab"
