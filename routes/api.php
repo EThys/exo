@@ -14,8 +14,6 @@ Route::post('/verifyCode','AuthController@postverifyCode');
 
 Route::group([ 'middleware' => ['auth:token', 'throttle:500,1'] ], function () {
 Route::get('/logout','AuthController@postLogout');
-Route::get('/transactionDelete/{id}','MVOrangeController@destroy');
-Route::get('/transactionUpdate/{id}','MVOrangeController@update');
 Route::resource('transactions', 'MVOrangeController')->only([
             'index',
             'store',
@@ -26,6 +24,8 @@ Route::resource('phone_types', 'PhoneTypeController')->only([
             'update',
             'destroy'
 ]);
+Route::get('/transactionDelete/{id}','MVOrangeController@destroy');
+Route::post('/transactionUpdate/{id}','MVOrangeController@update');
 Route::resource('currency', 'CurrencyController')->only([
     'index'
 ]);

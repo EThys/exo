@@ -103,7 +103,7 @@ const actions = {
             let updated = []
             // https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/
             function delay(updateMvOrange) {
-                return axios.get(transactionUpdate + '/' + updateMvOrange.TransactionID, {
+                return axios.post(transactionUpdate + '/' + updateMvOrange.TransactionID, {
                         ...updateMvOrange
                     })
             }
