@@ -14,11 +14,11 @@ Route::post('/verifyCode','AuthController@postverifyCode');
 
 Route::group([ 'middleware' => ['auth:token', 'throttle:500,1'] ], function () {
 Route::get('/logout','AuthController@postLogout');
+Route::get('/transactionDelete/{id}','MVOrangeController@destroy');
+Route::get('/transactionUpdate/{id}','MVOrangeController@update');
 Route::resource('transactions', 'MVOrangeController')->only([
             'index',
             'store',
-            'update',
-            'destroy'
 ]);
 Route::resource('phone_types', 'PhoneTypeController')->only([
             'index',

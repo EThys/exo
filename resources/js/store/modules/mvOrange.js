@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { mvOrange } from '../../api.js'
+import { mvOrange,transactionDelete,transactionUpdate, } from '../../api.js'
 
 // initial state
 const state = {
@@ -103,7 +103,7 @@ const actions = {
             let updated = []
             // https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/
             function delay(updateMvOrange) {
-                return axios.put(mvOrange + '/' + updateMvOrange.TransactionID, {
+                return axios.get(transactionUpdate + '/' + updateMvOrange.TransactionID, {
                         ...updateMvOrange
                     })
             }
@@ -134,7 +134,7 @@ const actions = {
             // https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/
             function delay(deleteMvOrange) {
                 console.log(deleteMvOrange)
-                return axios.delete(mvOrange + '/' + deleteMvOrange.TransactionID)
+                return axios.get(transactionDelete + '/' + deleteMvOrange.TransactionID)
             }
               
             async function delayedLog(item) {

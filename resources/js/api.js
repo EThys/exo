@@ -3,6 +3,8 @@ let url = '/api/v1'
 let company = url + '/company'
 let currency = url + '/currency'
 let mvOrange = url + '/transactions'
+let transactionDelete= url + '/transactionDelete'
+let transactionUpdate= url + '/transactionUpdate'
 let sms = url + '/sms'
 let phone_types = url + '/phone_types'
 let login = url + '/login'
@@ -18,6 +20,8 @@ export {
     verifyCodeUrl,
     currency,
     mvOrange,
+    transactionDelete,
+    transactionUpdate,
     sms,
     phone_types
 }
