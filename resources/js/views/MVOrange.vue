@@ -77,7 +77,7 @@
             </div>
             <div>
               <button @click.stop="exportExcel" class="btn btn-dark btn-sm btn-sized">
-                <i class="fa fa-file-excel"></i> Excelll
+                <i class="fa fa-file-excel"></i> Excel
               </button>
               <div class="d-inline-block">
                 <div class="input-group input-group-sm mb-3">
@@ -207,7 +207,7 @@ export default {
           width: "100px",
         },
         {
-          title: "Del",
+          title: "Delete",
           filterable: false,
           cell: OrangeCommandCell,
           width: "100px"

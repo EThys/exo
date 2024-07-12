@@ -27,7 +27,7 @@
         }
         .loading {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
         }
         .loading-bar {
@@ -68,13 +68,13 @@
     </style>
 
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    {{-- <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png"> --}}
+    {{-- <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"> --}}
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    {{-- <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png"> --}}
     <meta name="theme-color" content="#ffffff">
     <script nonce="{{ $headers->nonce() }}">
         window.myprovider = '{{ env("PROVIDER") }}'
@@ -92,8 +92,8 @@
     <noscript>
         <strong>We're sorry but client doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="loading-screen">
-        <h3 style="text-align: center;">Veuillez patienter s'il vous plaît</h3>
+    <div id="loading-screen"><br><br><br>
+        <h3 style="margin-top: 10%" style="text-align: center;">Veuillez patienter s'il vous plaît</h3>
         <div class="loading">
             <div class="loading-bar"></div>
             <div class="loading-bar"></div>

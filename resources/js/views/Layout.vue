@@ -43,30 +43,10 @@ export default {
           superAdmin: true
         },
         {
-          title: "USSD Config",
-          icon: "fab fa-slack-hash",
-          child: [
-            {
-              title: "USD",
-              action: "usd-config"
-            },
-            {
-              title: "FC",
-              action: "fc-config"
-            }
-          ],
-          simpleAdmin: true
-        },
-        {
           href: "/users",
           title: "Utilisateurs",
           icon: "fa fa-user",
           superAdmin: true
-        },
-        {
-          title: "Deconnexion",
-          icon: "fa fa-sign-out-alt",
-          action: "logout"
         },
         {
           title: "Charger des données",
@@ -77,6 +57,11 @@ export default {
           title: "Refresh Application",
           icon: "fa fa-sync-alt",
           action: "refresh"
+        },
+        {
+          title: "Deconnexion",
+          icon: "fa fa-sign-out-alt",
+          action: "logout"
         },
         {
           title: "Aide",
@@ -321,20 +306,20 @@ export default {
           <table class="table table-striped table-borderless table-hover table-sm text-white">
             <tbody>
               <tr>
-                <td>Menu</td>
-                <td>Ctrl + Q</td>
-              </tr>
-              <tr>
-                <td>Aide</td>
-                <td>Ctrl + I</td>
-              </tr>
-              <tr>
                 <td>Save</td>
                 <td>Ctrl + Enter</td>
               </tr>
               <tr>
                 <td>Ajouter</td>
                 <td>Ctrl + Space</td>
+              </tr>
+              <tr>
+                <td>Menu</td>
+                <td>Ctrl + Q</td>
+              </tr>
+              <tr>
+                <td>Aide</td>
+                <td>Ctrl + I</td>
               </tr>
             </tbody>
           </table>
