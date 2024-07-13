@@ -3,6 +3,10 @@ let url = '/api/v1'
 let company = url + '/company'
 let currency = url + '/currency'
 let mvOrange = url + '/transactions'
+let phoneTypeDelete= url + '/phoneTypeDelete'
+let phoneTypeUpdate= url + '/phoneTypeUpdate'
+let userDelete= url + '/userDelete'
+let userUpdate= url + '/userUpdate'
 let transactionDelete= url + '/transactionDelete'
 let transactionUpdate= url + '/transactionUpdate'
 let sms = url + '/sms'
@@ -22,6 +26,10 @@ export {
     mvOrange,
     transactionDelete,
     transactionUpdate,
+    phoneTypeDelete,
+    phoneTypeUpdate,
+    userDelete,
+    userUpdate,
     sms,
     phone_types
 }

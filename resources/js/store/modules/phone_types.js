@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { phone_types } from '../../api.js'
+import { phone_types,phoneTypeUpdate,phoneTypeDelete } from '../../api.js'
 
 // initial state
 const state = {
@@ -80,7 +80,7 @@ const actions = {
             let updated = []
             // https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/
             function delay(updateUser) {
-                return axios.put(phone_types + '/' + updateUser.PhoneTypeID, {
+                return axios.post(phoneTypeUpdate + '/' + updateUser.PhoneTypeID, {
                         ...updateUser
                     })
             }
@@ -111,7 +111,7 @@ const actions = {
             // https://lavrton.com/javascript-loops-how-to-handle-async-await-6252dd3c795/
             function delay(deleteUser) {
                 // console.log(deleteUser)
-                return axios.delete(phone_types + '/' + deleteUser.PhoneTypeID)
+                return axios.get(phoneTypeDelete + '/' + deleteUser.PhoneTypeID)
             }
               
             async function delayedLog(item) {

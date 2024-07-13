@@ -75,12 +75,9 @@ class UserController extends Controller
         }
     }
 
-    public function destroy(User $user)
+    public function destroy(string $id)
     {
-        $admin = Auth::user()->isAdmin();
-        if($admin)
-        {
-            $user->delete();
-        }
+        $user = User::find($id);
+        $user->delete();
     }
 }

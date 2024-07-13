@@ -85,13 +85,10 @@ class PhoneTypeController extends Controller
         }
     }
 
-    public function destroy(PhoneType $phone_type)
+    public function destroy(string $id)
     {
-        $admin = Auth::user()->isAdmin();
-        if($admin)
-        {
-            $phone_type->delete();
-        }
+        $phone_type = PhoneType::find($id);
+        $phone_type->delete();
     }
     public function getTypeByNumber($number){
         $phone_type = PhoneType::where('PhoneNumber', $number)->first();

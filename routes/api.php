@@ -21,9 +21,10 @@ Route::resource('transactions', 'MVOrangeController')->only([
 Route::resource('phone_types', 'PhoneTypeController')->only([
             'index',
             'store',
-            'update',
-            'destroy'
 ]);
+Route::get('/phoneTypeDelete/{id}','PhoneTypeController@destroy');
+Route::post('/phoneTypeUpdate/{id}','PhoneTypeController@update');
+
 Route::get('/transactionDelete/{id}','MVOrangeController@destroy');
 Route::post('/transactionUpdate/{id}','MVOrangeController@update');
 Route::resource('currency', 'CurrencyController')->only([
@@ -35,9 +36,10 @@ Route::resource('company', 'CompanyController')->only([
 Route::resource('user', 'UserController')->only([
     'index',
     'store',
-    'update',
-    'destroy'
 ]);
+Route::get('/userDelete/{id}','UserController@destroy');
+Route::post('/userUpdate/{id}','UserController@update');
+
 Route::get('phone_types/{number}', 'PhoneTypeController@getTypeByNumber');
 Route::get('transactions/check/{id}', 'MVOrangeController@checkTransaction');
 
